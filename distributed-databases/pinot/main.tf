@@ -163,16 +163,16 @@ module "eks" {
       min_size       = 6
       desired_size   = 6
 
-      ebs_optimized = true
-      block_device_mappings = {
-        xvda = {
-          device_name = "/dev/xvda"
-          ebs = {
-            volume_size = 100
-            volume_type = "gp3"
-          }
-        }
-      }
+      # ebs_optimized = true
+      # block_device_mappings = {
+      #   xvda = {
+      #     device_name = "/dev/xvda"
+      #     ebs = {
+      #       volume_size = 100
+      #       volume_type = "gp3"
+      #     }
+      #   }
+      # }
 
       labels = {
         WorkerType    = "ON_DEMAND"
